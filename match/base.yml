@@ -86,3 +86,19 @@ matches:
       Maintain a professional, warm tone and keep the email under 200 words.
 
       The final output should be the email content only, without any additional information or formatting.
+
+  
+  # Meeting link with context text (email-friendly)
+  - trigger: ';m'
+    replace: |
+      Here's my calendar link to schedule a time: https://meetings-na2.hubspot.com/jasper-rowan/jaspers-personal-meeting-link
+  
+  # Cypress AI 2-pager with context
+  - trigger: ';2'
+    replace: |
+      Here's our 1-pager and case studies: https://na2.hubs.ly/H01CMPt0
+  
+  # Pricing sheet with context
+  - trigger: ';p'
+    replace: |
+      Here's our pricing sheet: https://na2.hubs.ly/H01L6190
