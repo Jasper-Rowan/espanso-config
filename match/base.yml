@@ -73,7 +73,11 @@ matches:
   # Discovery call follow-up email prompt
   - trigger: ';e'
     replace: |
-      Given the full transcript of the discovery call and a list of all participants' email addresses, identify and address only those who are not part of the sales team (Jasper, Andrew, and Callum at cypressai.co). The email should:
+      Given the full transcript of the discovery call and a list of all participants' email addresses, identify and address only those who are not part of the sales team (Jasper, Andrew, and Callum at cypressai.co). 
+      
+      First, create a concise subject line (do not use em dashes or en dashes, use hyphens if needed).
+      
+      Then, write the email body that should:
 
       Thank the prospect for their time.
 
@@ -85,7 +89,19 @@ matches:
 
       Maintain a professional, warm tone and keep the email under 200 words.
 
-      The final output should be the email content only, without any additional information or formatting.
+      Format your output as follows:
+
+      ```text
+      [Subject line here]
+      ```
+
+      ```text
+      [Email body here - format with line breaks every 80-100 characters to avoid horizontal scrolling]
+      ```
+
+      IMPORTANT: In the email body code block, add line breaks within paragraphs approximately every 60-70 characters to ensure readability without horizontal scrolling. The email will still render correctly when copied and pasted.
+
+      Output only these two code blocks with no additional text or formatting.
 
   
   # Meeting link with context text (email-friendly)
