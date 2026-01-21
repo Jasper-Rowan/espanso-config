@@ -105,16 +105,16 @@ matches:
 
   
   # Meeting link with context text (email-friendly)
-  - trigger: '1m'
+  - trigger: ';m'
     replace: |
       Let me know if you have some times that work for you or feel free to use my calendar link to schedule a time: https://meetings-na2.hubspot.com/jasper-rowan/jaspers-personal-meeting-link
   
   # Cypress AI 2-pager with context
-  - trigger: ';2'
+  - trigger: ';1'
     replace: |
       Here's our 1-pager and case studies: https://na2.hubs.ly/H01CMPt0
   
   # Pricing sheet with context
-  - trigger: '1p'
+  - trigger: ';p'
     replace: |
       Here's our pricing sheet: https://na2.hubs.ly/H01L6190
