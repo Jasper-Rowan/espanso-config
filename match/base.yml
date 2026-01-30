@@ -39,82 +39,36 @@ matches:
 
   # And much more! For more information, visit the docs: https://espanso.org/docs/
 
+  # AI Prompts (content loaded from prompts/ directory)
+  
   # Call transcript analysis prompt
   - trigger: ';t'
-    replace: |
-      Produce the following four sections with the section titles exactly as written below (do not number the sections and do not use any bolding in any part of the output):
-      High-Level Summary
-      Write a concise narrative overview of the call in sentence form only (no bullets or dashes). Focus specifically on: any partnership discussions, any signs of buying intent, any customer pain points mentioned, and the overall direction and context of the call. The summary must be 100 words or less. Do not include action items in this section.
-
-      Action Items & Next Steps
-      List only action items explicitly stated or clearly agreed upon in the call. Present each action item as a numbered list item (1., 2., 3., etc.) using this exact formatting style:
-      Owner: Person Name
-      Task: Description of the task
-      Deadline or timeline: Date or "None stated"
-      Guidelines for this section:
-      The number, period, and Owner: must be on the same line.
-      Task: and Deadline or timeline: must be on their own lines indented by three spaces.
-      Use this exact structure for every action item with no blank lines inserted between number, owner, task, or deadline.
-      For each item, include:
-      Owner (person responsible)
-      Task (specific commitment)
-      Deadline or timeline (only if clearly stated)
-      Do not infer or create tasks.
-      Do not use bullets or dashes for anything other than the three internal fields listed above.
-      Do not repeat content from the summary.
-
-      RFP Pain Points
-      Identify the number one pain point the customer mentioned related to their RFP or proposal process. If multiple pain points were mentioned, summarize them briefly. If none were mentioned, state "No RFP pain points discussed." If pain points were hinted at indirectly, interpret them and provide your best-supported conclusion.
-      RFP Volume
-      Summarize the customer's RFP and RFI volume as discussed on the call. Explicitly state whether they do more than four RFPs/RFIs per month on average. If a range, frequency, or breakdown (for example, fast-turn vs formal RFPs) was given, include that concisely. If volume was only hinted at, provide your best-supported estimate. If not discussed at all, state "No RFP volume discussed." 
-      Keep the entire output concise, skimmable, and strictly factual. Only produce these four sections and nothing else.
-      Transcript:
-
+    replace: '{{transcript_prompt}}'
+    vars:
+      - name: transcript_prompt
+        type: shell
+        params:
+          cmd: 'cat "$CONFIG/prompts/transcript-analysis.txt"'
+  
   # Discovery call follow-up email prompt
   - trigger: ';e'
-    replace: |
-      Given the full transcript of the discovery call and a list of all participants' email addresses, identify and address only those who are not part of the sales team (Jasper, Andrew, and Callum at cypressai.co). 
-      
-      First, create a concise subject line (do not use em dashes or en dashes, use hyphens if needed).
-      
-      Then, write the email body that should:
-
-      Thank the prospect for their time.
-
-      Summarize the key points and discussions from the call in about 50 words.
-
-      Highlight any agreed-upon action items, including specific timelines if mentioned.
-
-      Ensure that the email is addressed only to the non-sales team participants.
-
-      Maintain a professional, warm tone and keep the email under 200 words.
-
-      Format your output as follows:
-
-      ```text
-      [Subject line here]
-      ```
-
-      ```text
-      [Email body here - format with line breaks every 80-100 characters to avoid horizontal scrolling]
-      ```
-
-      IMPORTANT: In the email body code block, add line breaks within paragraphs approximately every 60-70 characters to ensure readability without horizontal scrolling. The email will still render correctly when copied and pasted.
-
-      Output only these two code blocks with no additional text or formatting.
-
+    replace: '{{email_prompt}}'
+    vars:
+      - name: email_prompt
+        type: shell
+        params:
+          cmd: 'cat "$CONFIG/prompts/followup-email.txt"'
+  
+  # Quick snippets and links
   
   # Meeting link with context text (email-friendly)
   - trigger: ';m'
-    replace: |
-      Let me know if you have some times that work for you or feel free to use my calendar link to schedule a time: https://meetings-na2.hubspot.com/jasper-rowan/jaspers-personal-meeting-link
+    replace: 'Let me know if you have some times that work for you or feel free to use my calendar link to schedule a time: https://meetings-na2.hubspot.com/jasper-rowan/jaspers-personal-meeting-link'
   
-  # Cypress AI 2-pager with context
+  # Cypress AI 1-pager with context
   - trigger: ';1'
-    replace: |
-      Here's our 1-pager and case studies: https://na2.hubs.ly/H01CMPt0
+    replace: 'Here''s our 1-pager and case studies: https://na2.hubs.ly/H01CMPt0'
   
   # Pricing sheet with context
   - trigger: ';p'
-    replace: |
-      Here's our pricing sheet: https://na2.hubs.ly/H01L6190
+    replace: 'Here''s our pricing sheet: https://na2.hubs.ly/H01L6190'

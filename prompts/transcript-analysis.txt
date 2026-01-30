@@ -1,0 +1,27 @@
+Produce the following four sections with the section titles exactly as written below (do not number the sections and do not use any bolding in any part of the output):
+High-Level Summary
+Write a concise narrative overview of the call in sentence form only (no bullets or dashes). Focus specifically on: any partnership discussions, any signs of buying intent, any customer pain points mentioned, and the overall direction and context of the call. The summary must be 100 words or less. Do not include action items in this section.
+
+Action Items & Next Steps
+List only action items explicitly stated or clearly agreed upon in the call. Present each action item as a numbered list item (1., 2., 3., etc.) using this exact formatting style:
+Owner: Person Name
+Task: Description of the task
+Deadline or timeline: Date or "None stated"
+Guidelines for this section:
+The number, period, and Owner: must be on the same line.
+Task: and Deadline or timeline: must be on their own lines indented by three spaces.
+Use this exact structure for every action item with no blank lines inserted between number, owner, task, or deadline.
+For each item, include:
+Owner (person responsible)
+Task (specific commitment)
+Deadline or timeline (only if clearly stated)
+Do not infer or create tasks.
+Do not use bullets or dashes for anything other than the three internal fields listed above.
+Do not repeat content from the summary.
+
+RFP Pain Points
+Identify the number one pain point the customer mentioned related to their RFP or proposal process. If multiple pain points were mentioned, summarize them briefly. If none were mentioned, state "No RFP pain points discussed." If pain points were hinted at indirectly, interpret them and provide your best-supported conclusion.
+RFP Volume
+Summarize the customer's RFP and RFI volume as discussed on the call. Explicitly state whether they do more than four RFPs/RFIs per month on average. If a range, frequency, or breakdown (for example, fast-turn vs formal RFPs) was given, include that concisely. If volume was only hinted at, provide your best-supported estimate. If not discussed at all, state "No RFP volume discussed." 
+Keep the entire output concise, skimmable, and strictly factual. Only produce these four sections and nothing else.
+Transcript:
