@@ -61,6 +61,25 @@ matches:
   
   # Quick snippets and links
   
+  # Discovery pre-work request
+  - trigger: ';d'
+    replace: 'Hey team,\n\n\nAhead of our upcoming discovery session, please complete the short pre-work in the attached Google Sheet.\n\n\nThe goal is to quickly identify and quantify your highest-value automation opportunities so we can use our time together to prioritize the single best use case to pilot first.\n\n\n\n\nPlease list 3 to 8 candidate use cases and fill in the requested fields. The ROI will calculate automatically.\nThis should take about 10 minutes.\n\n\n\nLet me know if you have any questions, and I look forward to reviewing this together on our call.\n\n\n\n\nBest,\nJasper'
+  
+  # Video descriptions
+  - trigger: ';v'
+    replace: |
+      Creating and Editing Files in a Word Add-in: This shows how you can open our entire software inside of Microsoft Word and use it to create and edit document files with all the benefits of the rest of our software and all the benefits of working natively in Word.
+      https://edmjkp9amev46zgx.public.blob.vercel-storage.com/Word%20Add-in%20.mp4
+
+      One-Shotting a Compliance Matrix (Requirement Traceability Matrix): This video shows how you can do a single shot of a compliance matrix. This particular type of compliance matrix is sometimes called a Requirements Traceability Matrix. It's basically all of the specific line items that you need to respond to within a given RFP. Our software has the capability to essentially do this in about a minute and a half to two minutes. Usually this was a process that would take upwards of 40 hours for a human to do manually, pre-AI.
+      https://edmjkp9amev46zgx.public.blob.vercel-storage.com/OneShottingAComplianceMatrix.mp4
+
+      One-Shotting a Stylized PowerPoint: This shows how you can create a stylized PowerPoint. What's not shown in this is you can actually upload your own images or any sort of style guide references. I just need to extend this video. I realized that I didn't include that capability, but you could upload your own logos and it would be able to basically embed those within your PowerPoints as well. However, that is not shown in this video.
+      https://edmjkp9amev46zgx.public.blob.vercel-storage.com/Single%20Shot%20of%20a%20powerpoint.mp4
+
+      How to Upload and Filter Files at Scale: This shows how you can take a super messy database full of a bunch of files that are not beneficial to include and allows users to easily follow the principle of garbage in, garbage out for AI knowledge bases. Our Upload Pipeline lets you very quickly take unstructured data and organize it using just a simple text prompt.
+      https://edmjkp9amev46zgx.public.blob.vercel-storage.com/How%20to%20Upload%20files.mp4
+  
   # Meeting link with context text (email-friendly)
   - trigger: ';m'
     replace: 'Let me know if you have some times that work for you or feel free to use my calendar link to schedule a time: https://meetings-na2.hubspot.com/jasper-rowan/jaspers-personal-meeting-link'
@@ -72,3 +91,4 @@ matches:
   # Pricing sheet with context
   - trigger: ';p'
     replace: 'Here''s our pricing sheet: https://na2.hubs.ly/H01L6190'
+
